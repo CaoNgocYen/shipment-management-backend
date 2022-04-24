@@ -1,0 +1,1 @@
+[![CI](https://github.com/CaoNgocYen/shipping-tracking/actions/workflows/tests.yml/badge.svg)](https://github.com/CaoNgocYen/shipping-tracking/actions/workflows/tests.yml)
