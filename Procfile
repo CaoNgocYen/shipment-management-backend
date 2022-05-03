@@ -1,0 +1,1 @@
+web java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/shipping-tracking-0.0.1-SNAPSHOT.jar
