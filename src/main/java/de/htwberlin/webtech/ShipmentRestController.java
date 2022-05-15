@@ -22,7 +22,7 @@ public class ShipmentRestController {
 
     @GetMapping(path = "/api/v1/shipments")
     public ResponseEntity<List<Shipment>> fetchShipments(){
-        return ResponseEntity.ok(shipments );
+        return ResponseEntity.ok(shipments);
     }
 
 }
