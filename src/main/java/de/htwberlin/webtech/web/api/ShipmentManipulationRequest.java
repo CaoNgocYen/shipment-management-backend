@@ -1,26 +1,16 @@
 package de.htwberlin.webtech.web.api;
 
-public class Shipment {
-    private Long shipmentId;
+public class ShipmentManipulationRequest {
     private String senderName;
     private String recipientName;
     private String senderAddress;
     private String recipientAddress;
 
-    public Shipment(Long shipmentId, String senderName, String senderAddress, String recipientName, String recipientAddress) {
-        this.shipmentId = shipmentId;
+    public ShipmentManipulationRequest(String senderName, String recipientName, String senderAddress, String recipientAddress) {
         this.senderName = senderName;
-        this.senderAddress = senderAddress;
         this.recipientName = recipientName;
+        this.senderAddress = senderAddress;
         this.recipientAddress = recipientAddress;
-    }
-
-    public Long getShipmentId() {
-        return shipmentId;
-    }
-
-    public void setShipmentId(Long shipmentId) {
-        this.shipmentId = shipmentId;
     }
 
     public String getSenderName() {
