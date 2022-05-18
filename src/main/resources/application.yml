@@ -4,8 +4,6 @@ spring:
     password: ${DATASOURCE_PASSWORD}
     url: ${DATASOURCE_URL}
     driver-class-name: org.postgresql.Driver
-    hiraki:
-      maximum-pool-size: 5
   jpa:
     properties:
       hibernate:
