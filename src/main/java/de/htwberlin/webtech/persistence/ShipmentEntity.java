@@ -1,27 +1,38 @@
-package de.htwberlin.webtech.web.api;
+package de.htwberlin.webtech.persistence;
 
-public class Shipment {
+import javax.persistence.*;
 
-    private long shipmentId;
+@Entity(name = "shipments")
+public class ShipmentEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "shipment_id")
+    private Long shipmentId;
+
+    @Column(name = "recipient_name", nullable = false)
     private String recipientName;
+
+    @Column(name = "recipient_address", nullable = false)
     private String recipientAddress;
+
+    @Column(name = "sender_name", nullable = false)
     private String senderName;
+
+    @Column(name = "sender_address", nullable = false)
     private String senderAddress;
 
-    public Shipment(long shipmentId, String recipientName, String recipientAddress, String senderName, String senderAddress) {
-        this.shipmentId = shipmentId;
+    public ShipmentEntity(String recipientName, String recipientAddress, String senderName, String senderAddress) {
         this.recipientName = recipientName;
         this.recipientAddress = recipientAddress;
-        this.senderName = senderName;
         this.senderAddress = senderAddress;
+        this.senderName = senderName;
     }
 
-    public long getShipmentId() {
+    protected ShipmentEntity() {}
+
+    public Long getShipmentId() {
         return shipmentId;
-    }
-
-    public void setShipmentId(long shipmentId) {
-        this.shipmentId = shipmentId;
     }
 
     public String getRecipientName() {
@@ -56,3 +67,4 @@ public class Shipment {
         this.senderAddress = senderAddress;
     }
 }
+
